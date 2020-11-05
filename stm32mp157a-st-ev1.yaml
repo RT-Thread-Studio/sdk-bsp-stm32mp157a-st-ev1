@@ -1,0 +1,106 @@
+---
+yaml_version: 3
+pkg_version: 1.0.0
+pkg_vendor: RealThread
+pkg_type: Board_Support_Packages
+board:
+  name: STM32MP157A-ST-EV1
+  version: Rev.A
+  vendor: STMicroelectronics
+  buy_url_cn: https://detail.tmall.com/item.htm?spm=a220m.1000858.1000725.62.61d562cc54iMQp&id=605262221762&areaId=310100&user_id=4131769642&cat_id=2&is_b=1&rn=5f6c2848c7ce7a152ae8df66cdd2fc1a
+  buy_url_global: https://estore.st.com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-eval-boards/stm32mp157a-ev1.html
+  description_en: The STM32MP157A-EV1 leverage the capabilities of STM32MP1 Series microprocessors to allow users easily develop applications using STM32 MPU OpenSTLinux Distribution software for the main processor and STM32CubeMP1 software for the co-processor.
+  description_zh: STM32MP157A-EV1 利用了 STM32MP1 系列微处理器的功能，允许用户轻松地在主处理器使用 STM32 MPU OpenSTLinux 发行版软件，使用 STM32CubeMP1 软件开发协同处理器应用程序。
+  emulator_machine: ''
+  large_image: documents/images/board_large.jpg
+  price_cn: 3375.00 CNY
+  price_global: 376.36 USD
+  sale_contact_cn: https://www.stmcu.com.cn/
+  sale_contact_global: https://www.st.com/content/st_com/en.html
+  small_image: documents/images/board_small.jpg
+  debug_interface: SWD
+  debugger: ST-LINK
+chip:
+  device_vendor: STMicroelectronics
+  family_name: STM32
+  series_name: STM32MP1
+  sub_series_name: STM32MP157
+  chip_name: STM32MP157AAAx
+  clock_source: HSE
+  source_freq: '8000000'
+  target_freq: '209000000'
+  uart_name: UART4
+  tx_name: PG11
+  rx_name: PB2
+docs:
+- category: manual
+  file: documents/manuals/UM2535.pdf
+  title: Reference manual
+- category: sheet
+  file: documents/sheet/DS12504.pdf
+  title: STM32MP157A Datasheet
+features:
+- On-board ST-LINK/V2.1
+- ST PMIC STPMIC1
+- 2 × 4-Gbit DDR3L, 16 bits, 533 MHz
+- 2 × 512-Mbit Quad-SPI Flash
+- 32-Gbit eMMC v5.0
+- 8-Gbit SLC NAND, 8 bits, 8-bit ECC, 4-KB PS
+- 1-Gbps Ethernet (RGMII) compliant with IEEE-802.3ab
+- USB Host 4-port hub
+- USB OTG HS
+- 2 user LEDs
+- 2 user and reset push-buttons, 1 wake-up button
+- 4-direction joystick with selection button
+- CAN FD
+- 4 × ST-MEMS digital microphones
+- Stereo headset jack including analog microphone input
+- microSD card
+- 5.5" TFT 720×1280 pixels with LED backlight, MIPI DSISM interface, and capacitive touch panel
+- SPDIF RCA input and output
+features_zh:
+- 板载 ST-LINK/V2.1
+- ST PMIC STPMIC1
+- 2 个 4-Gbit DDR3L, 16 bits, 533 MHz
+- 2 个 512-Mbit Quard-SPI Flash
+- 1 个 32-Gbit eMMC v5.0
+- 1 个 8-Gbit SLC NAND, 8 bits, 8-bit ECC, 4-KB PS
+- 符合 IEEE-802.3ab 的 1 Gbps 以太网 (RGMII)
+- USB Host 4-port hub
+- USB OTG HS
+- 2 个用户 LED
+- 2 个用户按键， 1个复位按键，1个唤醒按键
+- 1 个带有选择按钮的4向操纵杆
+- CAN FD
+- 4 个 ST-MEMS 数字麦克风
+- 立体声耳机插孔包括模拟麦克风输入
+- microSD card
+- 5.5 寸 TFT 720×1280 像素，LED背光，MIPI DSISM接口，电容式触摸面板
+- SPDIF RCA 输入输出
+template_projects:
+- project_name: 'empty'
+  project_description: ''
+  project_type: rt-thread|@full|@latest
+  builtin_files:
+  - source_path_offset: rtt_default_project_0
+    target_path_offset: ''
+    files_and_folders:
+    - "*"
+  external_files:
+  - files_and_folders:
+    - components
+    - include
+    - libcpu/arm
+    - libcpu/Kconfig
+    - libcpu/SConscript
+    - src
+    - tools
+    - Kconfig
+    - LICENSE
+    package_name: RT-Thread
+    package_type: RT-Thread_Source_Code
+    package_vendor: ''
+    package_version: latest
+    source_path_offset: rt-thread
+    target_path_offset: rt-thread
+example_projects: []
